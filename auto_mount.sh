@@ -1,4 +1,4 @@
-#!/binbash
+#!/bin/bash
 
 sudo mkfs.xfs -f -L d1 /dev/sda
 sudo mkfs.xfs -f -L d2 /dev/sdb
