@@ -17,4 +17,10 @@ sudo cp /opt/cloud/mount_devices.sh /opt/swift/bin/mount_devices.sh
 
 sudo cp /opt/cloud/start_swift.service /etc/systemd/system/start_swift.service
 
+sudo chmod +x /opt/swift/bin/mount_devices.sh
+
+sudo systemctl start start_swift.service
+sudo systemctl enable start_swift.service
+sudo systemctl stop start_swift.service
+
 echo Thank you! Reboot now.
