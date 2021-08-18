@@ -1,0 +1,8 @@
+[Unit]
+Description=Mount Swift Drives by Zulfikar
+
+[Service]
+ExecStart=/opt/swift/bin/mount_devices.sh
+
+[Install]
+WantedBy=multi-user.target
