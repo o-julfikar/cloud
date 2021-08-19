@@ -64,25 +64,25 @@ sudo swift-ring-builder object-1.builder create 17 3 1
 sudo swift-ring-builder object-2.builder create 17 3 1
 
 echo Adding device 1...
-sudo swift-ring-builder account.builder add r1z1-127.0.0.1:6212/d1 100
-sudo swift-ring-builder container.builder add r1z1-127.0.0.1:6211/d1 100
-sudo swift-ring-builder object.builder add r1z1-127.0.0.1:6210/d1 100
-sudo swift-ring-builder object-1.builder add r1z1-127.0.0.1:6210/d1 100
-sudo swift-ring-builder object-2.builder add r1z1-127.0.0.1:6210/d1 100
+sudo swift-ring-builder account.builder add r1z1-127.0.0.1:6202/d1 100
+sudo swift-ring-builder container.builder add r1z1-127.0.0.1:6201/d1 100
+sudo swift-ring-builder object.builder add r1z1-127.0.0.1:6200/d1 100
+sudo swift-ring-builder object-1.builder add r1z1-127.0.0.1:6200/d1 100
+sudo swift-ring-builder object-2.builder add r1z1-127.0.0.1:6200/d1 100
 
 echo Adding device 2...
-sudo swift-ring-builder account.builder add r1z2-127.0.0.2:6222/d2 100
-sudo swift-ring-builder container.builder add r1z2-127.0.0.2:6221/d2 100
-sudo swift-ring-builder object.builder add r1z2-127.0.0.2:6220/d2 100
-sudo swift-ring-builder object-1.builder add r1z2-127.0.0.2:6220/d2 100
-sudo swift-ring-builder object-2.builder add r1z2-127.0.0.2:6220/d2 100
+sudo swift-ring-builder account.builder add r1z2-127.0.0.2:6202/d2 100
+sudo swift-ring-builder container.builder add r1z2-127.0.0.2:6201/d2 100
+sudo swift-ring-builder object.builder add r1z2-127.0.0.2:6200/d2 100
+sudo swift-ring-builder object-1.builder add r1z2-127.0.0.2:6200/d2 100
+sudo swift-ring-builder object-2.builder add r1z2-127.0.0.2:6200/d2 100
 
 echo Adding device 3...
-sudo swift-ring-builder account.builder add r1z3-127.0.0.3:6232/d3 100
-sudo swift-ring-builder container.builder add r1z3-127.0.0.3:6231/d3 100
-sudo swift-ring-builder object.builder add r1z3-127.0.0.3:6230/d3 100
-sudo swift-ring-builder object-1.builder add r1z3-127.0.0.3:6230/d3 100
-sudo swift-ring-builder object-2.builder add r1z3-127.0.0.3:6230/d3 100
+sudo swift-ring-builder account.builder add r1z3-127.0.0.3:6202/d3 100
+sudo swift-ring-builder container.builder add r1z3-127.0.0.3:6201/d3 100
+sudo swift-ring-builder object.builder add r1z3-127.0.0.3:6200/d3 100
+sudo swift-ring-builder object-1.builder add r1z3-127.0.0.3:6200/d3 100
+sudo swift-ring-builder object-2.builder add r1z3-127.0.0.3:6200/d3 100
 
 echo Rebalancing builders...
 cd /etc/swift
@@ -111,10 +111,10 @@ sudo pip install eventlet==0.25.0
 
 #sudo nano /etc/swift/proxy-server.conf
 
-#sudo swift-init proxy start
-#sudo swift-init account start
-#sudo swift-init container start
-#sudo swift-init object start
-#sudo swift-init proxy restart
+sudo swift-init proxy start
+sudo swift-init account start
+sudo swift-init container start
+sudo swift-init object start
+sudo swift-init proxy restart
 
 echo Enjoy! - Thank you Zulfikar, the KING!
