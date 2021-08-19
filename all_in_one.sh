@@ -23,6 +23,15 @@ cd /opt/swift
 sudo python setup.py install
 cd ..
 
+sudo mkdir -p /etc/swift
+cd /opt/swift/etc
+sudo cp account-server.conf-sample /etc/swift/account-server.conf
+sudo cp container-server.conf-sample /etc/swift/container-server.conf
+sudo cp object-server.conf-sample /etc/swift/object-server.conf
+sudo cp proxy-server.conf-sample /etc/swift/proxy-server.conf
+sudo cp drive-audit.conf-sample /etc/swift/drive-audit.conf
+sudo cp swift.conf-sample /etc/swift/swift.conf
+
 sudo mkfs.xfs -f -L d1 /dev/sda
 sudo mkfs.xfs -f -L d2 /dev/sdb
 sudo mkfs.xfs -f -L d3 /dev/sdc
