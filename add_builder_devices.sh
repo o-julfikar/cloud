@@ -16,18 +16,18 @@ sudo swift-ring-builder object-1.builder add r1z1-127.0.0.1:6000/d1 100
 sudo swift-ring-builder object-2.builder add r1z1-127.0.0.1:6000/d1 100
 
 echo Adding device 1...
-sudo swift-ring-builder account.builder add r1z2-127.0.0.1:6012/d2 100
-sudo swift-ring-builder container.builder add r1z2-127.0.0.1:6011/d2 100
-sudo swift-ring-builder object.builder add r1z2-127.0.0.1:6010/d2 100
-sudo swift-ring-builder object-1.builder add r1z2-127.0.0.1:6010/d2 100
-sudo swift-ring-builder object-2.builder add r1z2-127.0.0.1:6010/d2 100
+sudo swift-ring-builder account.builder add r1z2-127.0.0.2:6012/d2 100
+sudo swift-ring-builder container.builder add r1z2-127.0.0.2:6011/d2 100
+sudo swift-ring-builder object.builder add r1z2-127.0.0.2:6010/d2 100
+sudo swift-ring-builder object-1.builder add r1z2-127.0.0.2:6010/d2 100
+sudo swift-ring-builder object-2.builder add r1z2-127.0.0.2:6010/d2 100
 
 echo Adding device 1...
-sudo swift-ring-builder account.builder add r1z3-127.0.0.1:6022/d3 100
-sudo swift-ring-builder container.builder add r1z3-127.0.0.1:6021/d3 100
-sudo swift-ring-builder object.builder add r1z3-127.0.0.1:6020/d3 100
-sudo swift-ring-builder object-1.builder add r1z3-127.0.0.1:6020/d3 100
-sudo swift-ring-builder object-2.builder add r1z3-127.0.0.1:6020/d3 100
+sudo swift-ring-builder account.builder add r1z3-127.0.0.3:6022/d3 100
+sudo swift-ring-builder container.builder add r1z3-127.0.0.3:6021/d3 100
+sudo swift-ring-builder object.builder add r1z3-127.0.0.3:6020/d3 100
+sudo swift-ring-builder object-1.builder add r1z3-127.0.0.3:6020/d3 100
+sudo swift-ring-builder object-2.builder add r1z3-127.0.0.3:6020/d3 100
 
 cd /etc/swift
 sudo swift-ring-builder account.builder rebalance
