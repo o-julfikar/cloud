@@ -45,7 +45,7 @@ sudo systemctl start start_swift.service
 sudo systemctl enable start_swift.service
 sudo systemctl stop start_swift.service
 
-sudo cp swift.conf /etc/swift/swift.conf
+sudo cp /opt/cloud/swift.conf /etc/swift/swift.conf
 
 cd /etc/swift
 sudo swift-ring-builder account.builder create 17 3 1
