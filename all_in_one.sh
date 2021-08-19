@@ -108,12 +108,12 @@ sudo pip install pyeclib
 sudo pip install lxml
 sudo pip install eventlet==0.25.0
 
-sudo nano /etc/swift/proxy-server.conf
+#sudo nano /etc/swift/proxy-server.conf
 
-sudo swift-init proxy start
-sudo swift-init account start
-sudo swift-init container start
-sudo swift-init object start
-sudo swift-init proxy restart
+#sudo swift-init proxy start
+#sudo swift-init account start
+#sudo swift-init container start
+#sudo swift-init object start
+#sudo swift-init proxy restart
 
 echo Enjoy! - Thank you Zulfikar, the KING!
