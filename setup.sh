@@ -5,7 +5,7 @@ choice='NA'
 echo "Hello ${USER}, is Zulfikar your King? Type 'yes' or 'no' without quotation"
 choice=input
 
-if [[ $choice -nq 'yes' ]]; then
+if [[ $choice != 'yes' ]]; then
   exit
 fi
 
