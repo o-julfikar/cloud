@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read -p "Hello ${USER}, is Zulfikar your King? Type 'yes' or 'no' without quotation" choice
+read -p "Hello ${USER}, is Zulfikar your King? Type 'yes' or 'no' without quotations: " choice
 
 if [[ $choice != 'yes' ]]; then
   exit
