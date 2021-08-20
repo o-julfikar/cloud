@@ -112,10 +112,10 @@ sudo pip install lxml
 sudo pip install eventlet==0.25.0
 
 usercred="user_${USER}_me = secretpassword .admin .reseller_admin"
-sudo cp back-up-proxy-server.conf proxy-server.conf
-sudo sed -i -e "s/usercred/$usercred/g" proxy-server.conf
+sudo cp /opt/cloud/back-up-proxy-server.conf /opt/cloud/proxy-server.conf
+sudo sed -i -e "s/usercred/$usercred/g" /opt/cloud/proxy-server.conf
 
-sudo cp proxy-server.conf /etc/swift/proxy-server.conf
+sudo cp /opt/cloud/proxy-server.conf /etc/swift/proxy-server.conf
 
 sudo swift-init proxy start
 sudo swift-init account start
