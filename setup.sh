@@ -176,11 +176,17 @@ if [[ $choice != 'yes' ]]; then
 fi
 
 echo Rebalancing builders...
+echo "${USER}-${HOSTNAME}:~\$ cd /etc/swift"
 cd /etc/swift
+echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo swift-ring-builder account.builder rebalance"
 sudo swift-ring-builder account.builder rebalance
+echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo swift-ring-builder container.builder rebalance"
 sudo swift-ring-builder container.builder rebalance
+echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo swift-ring-builder object.builder rebalance"
 sudo swift-ring-builder object.builder rebalance
+echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo swift-ring-builder object-1.builder rebalance"
 sudo swift-ring-builder object-1.builder rebalance
+echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo swift-ring-builder object-2.builder rebalance"
 sudo swift-ring-builder object-2.builder rebalance
 
 
@@ -190,7 +196,10 @@ if [[ $choice != 'yes' ]]; then
   exit
 fi
 
+
+echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo bash -c 'echo local0.* /var/log/swift/all.log > /etc/rsyslog.d/0-swift.conf"
 sudo bash -c 'echo local0.* /var/log/swift/all.log > /etc/rsyslog.d/0-swift.conf'
+echo "${USER}-${HOSTNAME}:/etc/swift\$ cat /etc/rsyslog.d/0-swift.conf"
 cat /etc/rsyslog.d/0-swift.conf
 
 echo "${USER}-${HOSTNAME}:/etc/swift\$ "
