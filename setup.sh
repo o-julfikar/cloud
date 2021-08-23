@@ -181,8 +181,23 @@ sudo swift-ring-builder object.builder rebalance
 sudo swift-ring-builder object-1.builder rebalance
 sudo swift-ring-builder object-2.builder rebalance
 
-sudo bash -c 'echo local0.* /var/log/swift/all0.log > /etc/rsyslog.d/0-swift.conf'
+
+read -p "Dear ${USER}, Proceed to add log: " choice
+
+if [[ $choice != 'yes' ]]; then
+  exit
+fi
+
+sudo bash -c 'echo local0.* /var/log/swift/all.log > /etc/rsyslog.d/0-swift.conf'
 cat /etc/rsyslog.d/0-swift.conf
+
+echo "${USER}-${HOSTNAME}:/etc/swift\$ "
+
+read -p "Dear ${USER}, Proceed to install PIP dependencies: " choice
+
+if [[ $choice != 'yes' ]]; then
+  exit
+fi
 
 sudo mkdir /var/log/swift
 
