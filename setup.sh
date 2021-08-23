@@ -104,6 +104,8 @@ echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo swift-ring-builder object-1.builder 
 sudo swift-ring-builder object-1.builder create 3 3 1
 echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo swift-ring-builder object-2.builder create 3 3 1"
 sudo swift-ring-builder object-2.builder create 3 3 1
+echo "${USER}-${HOSTNAME}:/etc/swift\$ ls"
+ls
 
 echo "${USER}-${HOSTNAME}:/etc/swift\$ "
 
@@ -114,15 +116,15 @@ if [[ $choice != 'yes' ]]; then
 fi
 
 echo Adding device 1...
-echo "${USER}-${HOSTNAME}:/etc/swift\$ "
+echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo swift-ring-builder account.builder add r1z1-127.0.0.1:6202/d1 100"
 sudo swift-ring-builder account.builder add r1z1-127.0.0.1:6202/d1 100
-echo "${USER}-${HOSTNAME}:/etc/swift\$ "
+echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo swift-ring-builder container.builder add r1z1-127.0.0.1:6201/d1 100"
 sudo swift-ring-builder container.builder add r1z1-127.0.0.1:6201/d1 100
-echo "${USER}-${HOSTNAME}:/etc/swift\$ "
+echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo swift-ring-builder object.builder add r1z1-127.0.0.1:6200/d1 100"
 sudo swift-ring-builder object.builder add r1z1-127.0.0.1:6200/d1 100
-echo "${USER}-${HOSTNAME}:/etc/swift\$ "
+echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo swift-ring-builder object-1.builder add r1z1-127.0.0.1:6200/d1 100"
 sudo swift-ring-builder object-1.builder add r1z1-127.0.0.1:6200/d1 100
-echo "${USER}-${HOSTNAME}:/etc/swift\$ "
+echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo swift-ring-builder object-2.builder add r1z1-127.0.0.1:6200/d1 100"
 sudo swift-ring-builder object-2.builder add r1z1-127.0.0.1:6200/d1 100
 
 echo "${USER}-${HOSTNAME}:/etc/swift\$ "
@@ -134,15 +136,15 @@ if [[ $choice != 'yes' ]]; then
 fi
 
 echo Adding device 2...
-echo "${USER}-${HOSTNAME}:/etc/swift\$ "
+echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo swift-ring-builder account.builder add r1z2-127.0.0.2:6202/d2 100"
 sudo swift-ring-builder account.builder add r1z2-127.0.0.2:6202/d2 100
-echo "${USER}-${HOSTNAME}:/etc/swift\$ "
+echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo swift-ring-builder container.builder add r1z2-127.0.0.2:6201/d2 100"
 sudo swift-ring-builder container.builder add r1z2-127.0.0.2:6201/d2 100
-echo "${USER}-${HOSTNAME}:/etc/swift\$ "
+echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo swift-ring-builder object.builder add r1z2-127.0.0.2:6200/d2 100"
 sudo swift-ring-builder object.builder add r1z2-127.0.0.2:6200/d2 100
-echo "${USER}-${HOSTNAME}:/etc/swift\$ "
+echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo swift-ring-builder object-1.builder add r1z2-127.0.0.2:6200/d2 100"
 sudo swift-ring-builder object-1.builder add r1z2-127.0.0.2:6200/d2 100
-echo "${USER}-${HOSTNAME}:/etc/swift\$ "
+echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo swift-ring-builder object-2.builder add r1z2-127.0.0.2:6200/d2 100"
 sudo swift-ring-builder object-2.builder add r1z2-127.0.0.2:6200/d2 100
 
 echo "${USER}-${HOSTNAME}:/etc/swift\$ "
@@ -154,15 +156,15 @@ if [[ $choice != 'yes' ]]; then
 fi
 
 echo Adding device 3...
-echo "${USER}-${HOSTNAME}:/etc/swift\$ "
+echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo swift-ring-builder account.builder add r1z3-127.0.0.3:6202/d3 100"
 sudo swift-ring-builder account.builder add r1z3-127.0.0.3:6202/d3 100
-echo "${USER}-${HOSTNAME}:/etc/swift\$ "
+echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo swift-ring-builder container.builder add r1z3-127.0.0.3:6201/d3 100"
 sudo swift-ring-builder container.builder add r1z3-127.0.0.3:6201/d3 100
-echo "${USER}-${HOSTNAME}:/etc/swift\$ "
+echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo swift-ring-builder object.builder add r1z3-127.0.0.3:6200/d3 100"
 sudo swift-ring-builder object.builder add r1z3-127.0.0.3:6200/d3 100
-echo "${USER}-${HOSTNAME}:/etc/swift\$ "
+echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo swift-ring-builder object-1.builder add r1z3-127.0.0.3:6200/d3 100"
 sudo swift-ring-builder object-1.builder add r1z3-127.0.0.3:6200/d3 100
-echo "${USER}-${HOSTNAME}:/etc/swift\$ "
+echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo swift-ring-builder object-2.builder add r1z3-127.0.0.3:6200/d3 100"
 sudo swift-ring-builder object-2.builder add r1z3-127.0.0.3:6200/d3 100
 
 echo "${USER}-${HOSTNAME}:/etc/swift\$ "
