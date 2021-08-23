@@ -197,7 +197,7 @@ if [[ $choice != 'yes' ]]; then
 fi
 
 
-echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo bash -c 'echo local0.* /var/log/swift/all.log > /etc/rsyslog.d/0-swift.conf"
+echo "${USER}-${HOSTNAME}:/etc/swift\$ sudo bash -c 'echo local0.* /var/log/swift/all.log > /etc/rsyslog.d/0-swift.conf'"
 sudo bash -c 'echo local0.* /var/log/swift/all.log > /etc/rsyslog.d/0-swift.conf'
 echo "${USER}-${HOSTNAME}:/etc/swift\$ cat /etc/rsyslog.d/0-swift.conf"
 cat /etc/rsyslog.d/0-swift.conf
